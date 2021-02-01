@@ -5,6 +5,10 @@ stages:
       catalogTemplate: cattle-global-data:bitnami-apache
       version: 7.3.14
       answers:
+        cloneHtdocsFromGit.branch: master
+        cloneHtdocsFromGit.enabled: "true"
+        cloneHtdocsFromGit.interval: "120"
+        cloneHtdocsFromGit.repository: https://github.com/smarthome-csie-nuu-edu-tw/apache-template-chart-no-image/blob/master/.rancher-pipeline.yml
         service.type: NodePort
       name: ${CICD_GIT_REPO_NAME}-node
       targetNamespace: apache-template-chart-no-image
